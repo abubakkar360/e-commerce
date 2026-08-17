@@ -19,11 +19,25 @@
     background: #fbfbfb;
     color: #555;
 }
-    .descriptionbox_description{
+.descriptionbox_description{
         display: flex;
         flex-direction: column;
         gap: 25px;
         border: 1px solid #d0d0d0;
         padding: 48px;
         padding-bottom: 70px;
+}
+@media (max-width:1280px) {
+    .descriptionbox{
+    
+    margin: 60px;
     }
+}
+@media (max-width:800px) {
+    .descriptionbox{
+    margin: 60px 20px;
+    }
+    .descriptionbox_description{
+        font-size: 14px;
+    }
+}

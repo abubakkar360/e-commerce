@@ -11,11 +11,12 @@
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    gap: 75px;
-    padding: 20px 0px;
+    gap: 5rem;
+    padding: 1.25rem 0px;
     color: #454545;
     font-size: 18px;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .cartitems_format{
@@ -25,6 +26,7 @@
 
 .carticon_product_icon{
     height: 72px;
+    width: 72px;
 }
 .removeIcon{
     height: 25px;
@@ -47,6 +49,7 @@
     flex-direction: column;
     margin-right: 200px;
     gap: 40px;
+    text-transform: capitalize;
 }
 .cartitems_total_item{
     display: flex;
@@ -60,13 +63,13 @@
     border: none;
     background: #ff5a5a;
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
 }
 .cartitems_promocode{
     flex: 1;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
 }
 .cartitems_promocode p{
@@ -76,7 +79,7 @@
     width: 504px;
     margin-top: 15px;
     padding-left: 20px;
-    height: 58px;
+    height: 3.65rem;
     background: #eaeaea;
 }
 .cartitems_promobox input{
@@ -90,8 +93,107 @@
 .cartitems_promobox button{
     width: 170px;
     height: 58px;
-    font-size: 16px;
+    font-size: 1rem;
     background: black;
     color: white;
     cursor: pointer;
+}
+
+
+@media (max-width:1280px) {
+    .cartitems{
+        margin: 80px 50px;
+    }
+    .cartitems_format_main{
+        grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        gap: 1.4rem;
+        padding: 1rem 0rem;
+        font-size: 1rem;
+    }
+    .carticon_product_icon{
+        height: 3.4rem;
+    }
+    .removeIcon{
+        margin: auto;
+    }
+    .cartitems_quantity{
+        width: 2.5rem;
+        height: 2.2rem;
+    }
+    .cartitems_down{
+        margin: 5rem 0rem;
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .cartitems_total{
+        margin: 0;
+    }
+    .cartitems_total button{
+        max-width: 12.5rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+    .cartitems_promobox{
+        width: auto;
+        max-width: 25rem;
+    }
+    .cartitems_promobox input{
+        width: 100%;
+    }
+    .cartitems_promobox button{
+        width: 7.5rem;
+        margin-left: -7.8rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .cartitems_total{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 200px;
+        gap: 40px;
+        text-transform: capitalize;
+    }
+    
+}
+@media (max-width:800px) {
+    .cartitems_format_main{
+        font-size: 0.8rem;
+    }
+    .cartitems_total p{
+        font-size: 0.8rem;
+    }
+    .cartitems_total button{
+        max-width: 10rem;
+        height: 2.5rem;
+        font-size: 0.8rem;
+    }
+    .cartitems_promobox{
+        width: auto;
+        height: 3rem;
+        max-width: 22rem;
+        display: flex;
+    }
+    .cartitems_promobox input{
+        width: 100%;
+        padding: 0;
+        text-transform: capitalize;
+    }
+    .cartitems_promobox button{
+        width: 6.5rem;
+        height: 3rem;
+        margin-left: -6.7rem;
+        border: none;
+        text-transform: capitalize;
+    }
+}
+@media (max-width:500px) {
+    .cartitems_format_main{
+        grid-template-columns: 1fr 3fr 1fr;
+        display: none;
+    }
+    .cartitems_format{
+        display: grid;
+    }
 }
